@@ -1,0 +1,9 @@
+Gabriella Mashida,20141BCC003
+1,Empreendedorismo em Informatica,BCC001,91,1
+1,Calculo Diferencial e Integral I,BCC002,85,1
+1,Geometria Analitica e Algebra Linear,BCC003,79,1
+1,Programacao Procedimental,BCC004,99,1
+2,Introducao a Ciencia da Computacao,BCC005,57,1
+1,Logica para Computacao,BCC006,88,1
+0,Profissao em Computacao e Informatica,BCC007,0,0
+0,Calculo Diferencial e Integral II,BCC008,91,0

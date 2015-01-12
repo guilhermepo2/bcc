@@ -1,0 +1,10 @@
+Floriano Peixoto,20141BCC001
+2,Geometria Analitica e Algebra Linear,BCC003,42,1
+1,Sistemas Digitais,BCC012,65,1
+0,Algoritmos e Estruturas de Dados I,BCC010,74,0
+1,Matematica para Ciencia da Computacao,BCC009,81,1
+0,Empreendedorismo em Informatica,BCC001,0,0
+0,Calculo Diferencial e Integral I,BCC002,0,0
+1,Geometria Analitica e Algebra Linear,BCC003,98,2
+0,Programacao Procedimental,BCC004,0,0
+0,Calculo Diferencial e Integral II,BCC008,0,0

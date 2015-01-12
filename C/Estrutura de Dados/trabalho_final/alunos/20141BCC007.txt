@@ -1,0 +1,7 @@
+James Bond,20141BCC007
+0,Logica para Computacao,BCC006,0,0
+0,Introducao a Ciencia da Computacao,BCC005,0,0
+0,Programacao Procedimental,BCC004,0,0
+0,Geometria Analitica e Algebra Linear,BCC003,0,0
+0,Calculo Diferencial e Integral I,BCC002,0,0
+0,Empreendedorismo em Informatica,BCC001,0,0

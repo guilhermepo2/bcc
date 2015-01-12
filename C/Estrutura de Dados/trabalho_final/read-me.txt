@@ -1,0 +1,48 @@
+Programa feito para o trabalho final da disciplina Algoritmos e Estruturas de Dados I
+Universidade Federal de Uberlândia - 2014-1
+O Programa consiste em um cadastro simples de alunos e disciplinas, simulando uma faculdade.
+
+
+Instruções Breves de como Testar o Programa.
+
+O Guia seguinte fornece um passo a passo para textar todas as funcionalidades do Programa.
+
+1 - verifique se no cabeçalho dos arquivos está incluso o arquivo "header_windows.h" - (incluso por padrão)
+2 - Faça um projeto com todos os arquivos no programa que for utilizar, ou então, em caso de testes em linux ou OS X :
+Escrever as seguintes linhas de código no terminal na mesma pasta que estiver o programa:
+
+gcc -c main.c
+gcc -c alunos_funcoes.c
+gcc -c disciplinas_funcoes.c
+gcc -c editar_aluno.c
+gcc -c editar_aluno_funcoes.c
+gcc -o main.exe main.o alunos_funcoes.o disciplinas_funcoes.o editar_aluno.o editar_aluno_funcoes.o
+
+Para executar: ./main.exe
+
+-------------------------------------------------------------------
+
+Com o programa executado você tem um menu de opções, você pode testá-los um a um.
+
+1 - Cadastrar Aluno - Insira a opção 1 e escolha o nome e o número de matrícula que desejar, você pode verificar no arquivo "alunos.txt" que a inserção foi feita de forma ordenada. No diretório alunos/ - terá um arquivo com o número de matrícula do aluno criado, dentro dele terá o nome e o número de matrícula deste aluno.
+
+4 - Você pode apertar 4 a qualquer momento para que todos os alunos sejam mostrados na tela.
+
+3 - Remover Aluno - Insira a opção 3 e escolha um numero de matricula cadastrado, ele será removido da lista, isso pode ser verificado através da opção 4 ou olhando pelo arquivo "alunos.txt"
+
+6 - Semelhante ao cadastrar aluno, mas dessa vez, com uma disciplina que desejar.
+8 - Você pode apertar 8 a qualquer momento para que as disciplinas disponiveis sejam mostradas na tela.
+7 - Remoção de Disciplina - similar à remoção de aluno.
+
+As opções 5 e 9 gravam em arquivos os dados de aluno e disciplinas respectivamente, mas por segurança, por padrão, os arquivos são atualizados sempre que o programa for fechado ou um novo elemento for inserido.
+
+A opção 2 te leva para o modo de edição de aluno, para isso, é necessário um número de Matrícula, por exemplo: 20141BCC001 - o Aluno Floriano Peixoto.
+
+Com as opções 2, 3 e 4 Você pode ver todas as disciplinas da vida do aluno, disciplinas sendo cursadas e as que ele foi aprovado ou reprovado.
+
+Na Opção 1 - você pode inserir uma nova disciplina para o aluno cursar, através do código dessa disciplina. (Por exemplo: BCC007)
+
+Na Opção 5 - Você pode inserir uma nota para uma disciplina que o aluno esteja cursando, feito também através do código da disciplina. (BCC007)
+
+Na Opção 6 - Você pode encerrar uma disciplina e de acordo com a nota que o aluno tem, ele passará a ter a condição de Aprovado ou Reprovado na Matéria.(BCC007)
+

@@ -1,0 +1,4 @@
+Beatriz Checopay,20141BCC005
+2,Geometria Analitica e Algebra Linear,BCC003,48,1
+1,Calculo Diferencial e Integral I,BCC002,91,1
+1,Empreendedorismo em Informatica,BCC001,68,1
