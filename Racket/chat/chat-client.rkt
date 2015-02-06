@@ -34,9 +34,6 @@
 (define CURSOR-ON (rectangle 4 (+ 4 (* 2 LINE-SPACING)) "solid" "red"))
 (define CURSOR-OFF (rectangle 3 (+ 4 (* 2 LINE-SPACING)) "solid" "white"))
 
-(define MID-HEIGHT (/ HEIGHT 2))
-(define MID-WIDTH (/ WIDTH 2))
-
 ;; CONSTANT FOR CHAT AREA FROM CCS.NEU.EDU
 (define CHAT-AREA
   (local [(define SEP-Y (- HEIGHT FONT-SIZE (* 2 LINE-SPACING)))]
