@@ -117,7 +117,7 @@
     [else c]))
 ;;-------------------------------------------------------------------------------------
 ;; delete-key : Client -> Client
-;; receive a client and delete the last char from it
+;; receive a client and delete the last char from the string.
 
 (define (delete-key c)
   (cond [(string=? "" (client-editor c)) c]
@@ -152,3 +152,5 @@
             (register server)
             (name nick)
             (on-receive handle-msg)))
+
+(test)

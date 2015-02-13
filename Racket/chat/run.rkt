@@ -1,7 +1,6 @@
 #lang racket
 
 (require (only-in "chat-client.rkt" join-chat string-remove-last)
-         (only-in "chat-server.rkt" start-server)
          2htdp/universe 2htdp/image)
 ;;-------------------------------------------------------------------------------------
 ;; Idea: Get the Name and server from the client
@@ -9,7 +8,7 @@
 ;; A User is (make-user String1 flag cursor)
 ;; String1 its users' nickname
 ;; Flag is a Boolean that will tell if the user is ready to join the chat
-;; CURSOR? is a Boolean that shows a blinking cursos
+;; CURSOR? is a Boolean that shows a blinking cursor
 
 ; Constants
 
@@ -18,7 +17,7 @@
 (define FONT-SIZE 22)
 (define FONT-COLOR "black")
 (define CURSOR-ON (rectangle 4 FONT-SIZE "solid" "red"))
-(define CURSOR-OFF (rectangle 3 FONT-SIZE "solid" "white"))
+
 ;;-------------------------------------------------------------------------------------
 ;; to-image: String-> Image
 ;; Receives a String and return an image
@@ -27,6 +26,7 @@
 
 (define NICK-IMG (to-image "Enter your nickname: "))
 (define FINISH-CHAT (to-image "Hope you enjoyed your chatting time!"))
+
 ;;-------------------------------------------------------------------------------------
 
 ;; render-client : User -> Image
@@ -34,7 +34,7 @@
 (define (render-editor u)
   (local [(define editor (to-image (user-nick u)))]
     (place-image NICK-IMG (/ WIDTH 2) (- (/ HEIGHT 2) 25)
-      (place-image (if (user-cursor? u) CURSOR-ON CURSOR-OFF) 
+      (place-image CURSOR-ON
                    (+ (/ WIDTH 2) (/ (image-width editor) 2))
                    (/ HEIGHT 2)
                    (place-image editor (/ WIDTH 2) (/ HEIGHT 2) (empty-scene WIDTH HEIGHT))))))
@@ -52,7 +52,7 @@
     [else u]))
 ;;-------------------------------------------------------------------------------------
 ;; delete-key : User -> User
-;; receive a user and delete the last char from it
+;; receive a user and delete the last char from the string being typed
 
 (define (delete-key u)
   (cond [(string=? "" (user-nick u)) u]
@@ -78,7 +78,6 @@
 ;;-------------------------------------------------------------------------------------
 (define (teste-chat)
   (launch-many-worlds
-   (start-server)
    (join-chat "pessoa1" "127.0.0.1")
    (join-chat "pessoa2" "127.0.0.1")
    (join-chat "pessoa3" "127.0.0.1")))
