@@ -3,10 +3,14 @@
 (require 2htdp/image 2htdp/universe)
 (require test-engine/racket-tests)
 (provide start-server)
+
 ;;-------------------------------------------------------------------------------------
 ;; A Server is (make-server worlds)
 ;; Where worlds -> [ListOf iworld]
 (define-struct server (worlds))
+
+; CONSTANTS
+(define WELCOME-MESSAGE "Bem Vindo ao Chat Racket!")
 ;;-------------------------------------------------------------------------------------
 ;; handle-msg : Server iworld String -> Bundle
 ;; Handles messages coming from the clients.
@@ -32,9 +36,10 @@
 ;; Handles new Connection
 (define (handle-new srv iw)
   (make-bundle (make-server (cons iw (server-worlds srv)))
+               (cons (make-mail iw WELCOME-MESSAGE)
                (map (lambda (w)
-                      (make-mail iw (string-append (iworld-name iw) " joined.")))
-                    (server-worlds srv))
+                      (make-mail w (string-append (iworld-name iw) " entrou.")))
+                    (server-worlds srv)))
                (list)))
 ;;-------------------------------------------------------------------------------------
 ;; handle-disconnect : Server iworld -> Bundle
@@ -43,7 +48,7 @@
   (local [(define new-worlds (remove iw (server-worlds srv)))]
     (make-bundle (make-server new-worlds)
                  (map (lambda (w)
-                        (make-mail w (string-append (iworld-name iw) " disconnected.")))
+                        (make-mail w (string-append (iworld-name iw) " desconectou.")))
                       new-worlds)
                  (list iw))))
 ;;-------------------------------------------------------------------------------------

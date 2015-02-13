@@ -4,7 +4,9 @@
 (require 2htdp/image 2htdp/universe)
 (require test-engine/racket-tests)
 
-(provide join-chat)
+(provide join-chat
+         to-image
+         string-remove-last)
 
 ;;-------------------------------------------------------------------------------------
 ;; A client is (make-client name lines editor curse-on?)
@@ -31,11 +33,8 @@
 (define LINE-INDENT 5)
 (define DIVIDING-COLOR "red")
 (define NICK-DIVIDER " : ")
-(define CURSOR-ON (rectangle 4 (+ 4 (* 2 LINE-SPACING)) "solid" "red"))
-(define CURSOR-OFF (rectangle 3 (+ 4 (* 2 LINE-SPACING)) "solid" "white"))
-
-(define MID-HEIGHT (/ HEIGHT 2))
-(define MID-WIDTH (/ WIDTH 2))
+(define CURSOR-ON (rectangle 4 (+ 4 (* 1 LINE-SPACING)) "solid" "red"))
+(define CURSOR-OFF (rectangle 3 (+ 4 (* 1 LINE-SPACING)) "solid" "white"))
 
 ;; CONSTANT FOR CHAT AREA FROM CCS.NEU.EDU
 (define CHAT-AREA
@@ -109,14 +108,23 @@
                                   NICK-DIVIDER
                                   (client-editor c)))]
     [(key=? ke "\b")
-     (make-client (client-name c) (client-lines c)
-                  (string-remove-last (client-editor c))
-                  (client-curse-on? c))]
+     (delete-key c)]
+    
     [(= (string-length ke) 1)
      (make-client (client-name c) (client-lines c)
                   (string-append (client-editor c) ke)
                   (client-curse-on? c))]
     [else c]))
+;;-------------------------------------------------------------------------------------
+;; delete-key : Client -> Client
+;; receive a client and delete the last char from it
+
+(define (delete-key c)
+  (cond [(string=? "" (client-editor c)) c]
+        [else (make-client (client-name c) (client-lines c)
+                           (string-remove-last (client-editor c))
+                           (client-curse-on? c))]))
+
 ;;-------------------------------------------------------------------------------------
 ;; update: Client -> Client
 ;; enable the cursor to blink
