@@ -1,0 +1,14 @@
+schema: GameStoreDB
+index: (hashIndex, gameName)
+table: (consoleTable, consoleTable.txt, heapFile)
+       (varchar consoleName, fixint price, fixint generation)
+       (noIndex)
+       (consoleName:PrimaryKey)
+
+
+table: (gameTable, gameTable.txt, heapFile)
+       (varchar gameName, int price, varchar style, varchar console)
+       (hashIndex)
+       (gameName:PrimaryKey, console:ForeignKey(consoleTable.consoleName)
+
+visions: ()

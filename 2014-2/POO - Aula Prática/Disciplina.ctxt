@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=curso
+comment0.target=Disciplina(Curso)
+comment1.params=codigo\ nome\ cargaHoraria\ curso\ professor
+comment1.target=Disciplina(int,\ java.lang.String,\ int,\ Curso,\ Professor)
+comment2.params=codigo
+comment2.target=boolean\ setCodigo(int)
+comment3.params=nome
+comment3.target=boolean\ setNome(java.lang.String)
+comment4.params=cargaHoraria
+comment4.target=boolean\ setCargaHoraria(int)
+comment5.params=
+comment5.target=void\ lerDados()
+comment6.params=
+comment6.target=void\ mostrarDados()
+numComments=7

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=cod
+comment0.target=void\ setCodigo(int)
+comment1.params=
+comment1.target=int\ getCodigo()
+numComments=2

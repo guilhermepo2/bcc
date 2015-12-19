@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=a\ arquivo
+comment0.target=boolean\ gravar(java.lang.Object,\ java.lang.String)
+comment1.params=arquivo
+comment1.target=java.lang.Object\ recuperar(java.lang.String)
+numComments=2

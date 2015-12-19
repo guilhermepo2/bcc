@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=nome
+comment0.target=boolean\ setNome(java.lang.String)
+comment1.params=endereco
+comment1.target=boolean\ setEndereco(java.lang.String)
+comment2.params=telefone
+comment2.target=boolean\ setTelefone(java.lang.String)
+comment3.params=cpf
+comment3.target=boolean\ setCpf(java.lang.String)
+comment4.params=ctps
+comment4.target=boolean\ setCtps(java.lang.String)
+comment5.params=salario
+comment5.target=boolean\ setSalario(double)
+comment6.params=
+comment6.target=void\ lerDados()
+comment7.params=
+comment7.target=void\ mostrarDados()
+comment8.params=
+comment8.target=double\ CalcSalario()
+numComments=9

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=valor
+comment0.target=void\ setValorHoraExtra(double)
+comment1.params=
+comment1.target=double\ getValorHoraExtra()
+comment2.params=quantHoras\ valorHora
+comment2.target=double\ CalcSalario(double,\ double)
+comment3.params=
+comment3.target=double\ CalcSalario()
+numComments=4
