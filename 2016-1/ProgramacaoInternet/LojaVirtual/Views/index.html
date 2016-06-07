@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lojinha Virtual</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
+        <style>
+            .login {
+                margin: 10% 40%;
+                align-self: center;
+            }
+            input {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="LoginLogic" method="POST">
+            <div class="login">
+            <table class="table-hover">
+                <th>Loja Virtual</th>
+                <tr>
+                    <td>usuario: </td>
+                    <td><input type="text" name="user"></td>
+                </tr>
+                <tr>
+                    <td>senha: </td>
+                    <td><input type="password" name="pass"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Enviar"></td>
+                    <td><input type="reset" value="Limpar"></td>
+                </tr>
+            </table>
+            </div>
+        </form>
+    </body>
+</html>
