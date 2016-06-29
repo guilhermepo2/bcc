@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="../templates/basic.xhtml">
+        <ui:define name="header">
+            <div class="page-top">Finalizar Compra
+            </div>
+        </ui:define>
+        
+        <ui:define name="conteudo">
+            <div class="content">
+                <h1> Seus Produtos </h1>
+                <h:form>
+                    <h:panelGrid columns="1">
+                        <ui:repeat var="item" value="#{SessionManager.getInstance().getCarrinho().nomeProdutos}" varStatus="status">
+                            <h:outputLabel value="#{item}" /><br/>
+                        </ui:repeat> 
+                        
+                        <h:outputLabel value="Valor Total: #{SessionManager.getInstance().getCarrinho().getPreco()}" />
+                        <h:commandButton action="#{Finalizar.finalizar()}" value="Finalizar" />
+                        <h:commandButton action="index" value="Voltar" />
+                    </h:panelGrid>
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+

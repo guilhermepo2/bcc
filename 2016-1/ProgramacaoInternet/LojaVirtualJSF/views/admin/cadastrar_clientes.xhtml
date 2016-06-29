@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <ui:composition template="../templates/basic.xhtml">
+        <ui:define name="header">
+            <div class="page-top">
+                Inserindo um novo Cliente
+            </div>
+        </ui:define>
+        
+        <ui:define name="conteudo">
+            <div class="content">
+                <h:form>
+                    <h:panelGrid columns="2">
+                            <h:outputLabel value="CPF: "/>
+                            <h:inputText id="cpf" value="#{Cliente.cpf}"/>
+                            <h:outputLabel value="Nome: "/>
+                            <h:inputText id="nome" value="#{Cliente.nome}"/>
+                            <h:outputLabel value="Endereco: "/>
+                            <h:inputText id="endereco" value="#{Cliente.endereco}"/>
+                            <h:outputLabel value="usuario: "/>
+                            <h:inputText id="usuario" value="#{Cliente.usuario}"/>
+                            <h:outputLabel value="password: "/>
+                            <h:inputText id="password" value="#{Cliente.senha}"/>
+                        
+                            <h:commandButton action="#{Cliente.inserirCliente()}" value="Inserir" />
+                            <h:commandButton action="index" value="Voltar"/>
+                            <h:commandButton action="listarClientes.jsp" value="Ver Clientes" />
+                    </h:panelGrid>
+                </h:form>
+            </div>
+        </ui:define>
+        
+    </ui:composition>
+</html>
+

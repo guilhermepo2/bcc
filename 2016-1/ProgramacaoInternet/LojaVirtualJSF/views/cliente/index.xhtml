@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="../templates/basic.xhtml">
+        <ui:define name="header">
+            <div class="page-top">Seja Bem Vindo,
+                <h:outputText value="#{SessionManager.getInstance().getCliente().getNome()}"/>
+            </div>
+        </ui:define>
+        
+        <ui:define name="conteudo">
+            <div class="content">
+                <h:form>
+                    <h:panelGrid>
+                            <h:commandButton action="selecionar_produtos" value="Selecionar Produtos" />
+                            <h:commandButton action="finalizar_compra" value="Finalizar Compra" />
+                            <h:commandButton action="#{Logout.fazerLogout()}" value="Fazer Logout" />
+                    </h:panelGrid>
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+
