@@ -4,3 +4,6 @@
 [submodule "2016-1/cco20161"]
 	path = 2016-1/cco20161
 	url = https://github.com/guilhermepo2/cco20161.git
+[submodule "2016-2/computational-intelligence"]
+	path = 2016-2/computational-intelligence
+	url = https://github.com/guilhermepo2/computational-intelligence.git
