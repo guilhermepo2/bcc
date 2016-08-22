@@ -7,3 +7,6 @@
 [submodule "2016-2/computational-intelligence"]
 	path = 2016-2/computational-intelligence
 	url = https://github.com/guilhermepo2/computational-intelligence.git
+[submodule "2016-2/distributed-systems"]
+	path = 2016-2/distributed-systems
+	url = https://github.com/guilhermepo2/distributed-systems.git
